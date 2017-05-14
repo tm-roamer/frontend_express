@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <!-- 这段注释, 不可以删除, 是动态脚本引入css -->
+    <!-- build:style bundle --><!-- /build -->
+  </head>
+  <body>
+    <div style="display: none;">
+      <!-- 这段注释, 不可以删除, 是动态脚本引入svg -->
+      <!-- build:section recursive views --><!-- /build -->
+    </div>
+    <!-- 导航条 -->
+    <nav class="navbar navbar-default app-navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">          
+          <a class="navbar-brand" href="javascript:void(0)"><img src="/img/logo.png"/></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a class="app-navbar-link app-show-hide-menu" href="javascript:void(0)" data-show="hide"
+                 data-toggle="tooltip" data-placement="right" title="控制菜单展开收起">
+                <svg><use xlink:href="#list"></use></svg>
+              </a>
+            </li>
+            <!-- <li>
+              <div class="app-navbar-time app-relative">
+                <svg><use xlink:href="#time"></use></svg>
+                <span class="app-time">17:24:35</span>
+                <span class="app-date">2016/5/28</span>
+                <span class="app-week">星期六</span>
+              </div>
+            </li> -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li id="app-alert-container">
+              <!-- 插入告警 -->
+            </li>
+            <li>
+              <div class="app-navbar-time app-relative">
+                <svg><use xlink:href="#time"></use></svg>
+                <span class="app-time">17:24:35</span>
+                <span class="app-date">2016/5/28</span>
+                <span class="app-week">星期六</span>
+              </div>
+            </li>
+            <!--<li> 
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group app-relative">
+                  <svg class="app-form-group-ico"><use xlink:href="#search"></use></svg>
+                  <input type="text" class="form-control app-navbar-search" placeholder="检索">
+                </div>
+              </form>
+            </li> -->
+            <!-- <li>
+              <a class="app-navbar-link" href="javascript:void(0)">
+                <svg><use xlink:href="#voice"></use></svg>
+              </a>
+            </li> -->
+            <li class="divider"></li>
+            <li>
+                <a class="app-navbar-link" href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="设置中心">
+                  <svg><use xlink:href="#set"></use></svg>
+                </a>
+            </li>
+            <li>
+                <a class="app-navbar-link" href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="用户中心">
+                  <svg><use xlink:href="#user"></use></svg>
+                </a>
+            </li>
+            <li>
+                <a class="app-navbar-link" href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="注销">
+                  <svg><use xlink:href="#signout"></use></svg>
+                </a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 内容区 -->
+    <div class="container-fluid app-container-fluid clearfix">
+      <!-- 边栏菜单 -->
+      <div class="pull-left app-sidebar">
+        <ul class="nav nav-pills nav-stacked app-sidebar-menu" data-type="top">
+          <li><a class="app-sidebar-menu-link" href="javascript:void(0)">
+            <svg><use xlink:href="#home"></use></svg>主页</a>
+          </li>
+          <li class="active">
+            <a class="app-sidebar-menu-link" href="javascript:void(0)" data-active="false">
+              <svg><use xlink:href="#chart"></use></svg>
+              一期工程
+              <svg class="app-link-show-hide-ico"><use xlink:href="#left"></use></svg>
+            </a>
+            <ul class="nav nav-pills nav-stacked app-sidebar-menu app-sidebar-sub-menu">
+              <li>
+                <a class="app-sidebar-menu-link" href="#!v1_visit" data-issub="sub">访问态势地图版</a></li>
+              <li>
+              <li>
+                <a class="app-sidebar-menu-link" href="#!v1_access_analysis" data-issub="sub">访问态势图表版</a></li>
+              <li>
+                <a class="app-sidebar-menu-link" href="#!v1_attack" data-issub="sub">互联网攻击态势</a></li>
+              <li>
+                <a class="app-sidebar-menu-link" href="#!v1_leak" data-issub="sub">资产漏洞</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="app-sidebar-menu-link" href="javascript:void(0)" data-active="false">
+              <svg><use xlink:href="#danger"></use></svg>
+              高危漏洞主机追溯
+              <svg class="app-link-show-hide-ico"><use xlink:href="#left"></use></svg>
+            </a>
+            <ul class="nav nav-pills nav-stacked app-sidebar-menu app-sidebar-sub-menu">
+              <li>
+                <a class="app-sidebar-menu-link" href="javascript:void(0)" data-issub="sub">当前综合评分</a></li>
+              <li>
+                <a class="app-sidebar-menu-link" href="javascript:void(0)" data-issub="sub">漏洞柱形图</a></li>
+              <li>
+                <a class="app-sidebar-menu-link" href="javascript:void(0)" data-issub="sub">主机追溯图</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="app-sidebar-menu-link" href="javascript:void(0)">
+              <svg><use xlink:href="#flow"></use></svg>
+              流量异常主机追溯
+            </a>
+          </li>
+          <li>
+            <a class="app-sidebar-menu-link" href="javascript:void(0)">
+              <svg><use xlink:href="#performance"></use></svg>
+              性能异常主机追溯
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- 工作区 -->
+      <div class="app-content app-relative">
+        <!-- loading -->
+        <div class="app-loading hide">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 插入告警提示 -->
+    <script id="app-alert" type="text/html">
+      <div class="alert alert-warning alert-dismissible app-alert app-alert-animation" role="alert">
+        <a class="btn close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+        <strong>{{title}}</strong>{{content}}
+      </div>
+    </script>
+
+    <!-- 这段注释, 不可以删除, 是动态脚本引入lib.js -->
+    <!-- lib.js placeholder -->
+    <script type="text/javascript">
+      // app全局对象
+      window.app = {
+        baseUrl: '', //grunt replace:base_url 不可以修改, 已配置通过grunt命令来构建路径
+      };
+      // 模块化配置
+      seajs.config({
+        base: app.baseUrl,
+        alias: {
+          "route": "component/main/route.js", // 页面路由设置
+          "main": "component/main/main.js",   // 导航条, 边栏菜单
+          "datetimepicker": "component/common/datepicker/bootstrap-datetimepicker.js",  // 日历插件
+          "datepicker": "component/common/datepicker/datepicker.js",                    // 时间条公共组件
+          "attackline": "component/common/attackline/attackline.js",                    // 攻击趋势折线图
+          "visitline": "component/common/visitline/visitline.js",                       // 访问趋势折线图
+          "v1_access_analysis": "component/v1/access_analysis/access_analysis.js",      // 一期工程: 访问分析
+          "v1_visit": "component/v1/visit/visit.js",     // 一期工程: 中国地图的访问量top10
+          "v1_attack": "component/v1/attack/attack.js",  // 一期工程: 世界地图的攻击分布
+          "v1_leak": "component/v1/leak/leak.js",        // 一期工程: 漏洞top10
+        }
+      });
+      // 加载入口模块
+      seajs.use(["main", "route"]);
+    </script>
+  </body>
+</html>

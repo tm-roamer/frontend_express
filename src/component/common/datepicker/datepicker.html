@@ -1,0 +1,32 @@
+
+<!-- 时间控件 -->
+<script id="app-panel-head" type="text/html">
+	<div class="clearfix app-panel-head">
+		<div class="pull-left">
+			<form class="form-inline">
+				 <div class="form-group app-relative">
+				    <label>从</label>
+				    <input type="text" class="app-panel-head-time form-control app-starttime" 
+				    	placeholder="开始时间">
+				    <svg class="datepicker"><use xlink:href="#date"></use></svg>
+				</div>
+				<div class="form-group  app-relative">
+				    <label>至</label>
+				    <input type="text" class="app-panel-head-time form-control app-endtime" 
+				    	placeholder="结束时间">
+				    <svg class="datepicker"><use xlink:href="#date"></use></svg>
+				</div>
+				<a class="app-panel-head-search" href="javascript:void(0);">开始检索</a>
+				<span class="desc-title text-left">
+					{{title}}<span class="desc-sub-title">{{subtitle}}</span>
+				</span>
+			</form>
+		</div>
+		<div class="pull-right {{ishideyear ? 'hide' : ''}}">
+			<div class="app-panel-head-btn-group">
+			  <a class="app-time-selected app-panel-head-time-half-year active" data-type="6">半年</a><a
+			   class="app-time-selected app-panel-head-time-year" data-type="12">一年</a>
+			</div>
+		</div>
+	</div>
+</script>

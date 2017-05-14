@@ -1,0 +1,33 @@
+{
+  "name": "alien",
+  "version": "1.0.0",
+  "description": "前端自动化解决方案",
+  "private": true,
+  "devDependencies": {
+    "connect-livereload": "^0.5.4",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-htmlmin": "^0.6.0",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-filerev": "^2.3.1",
+    "grunt-filerev-replace": "^0.1.4",
+    "grunt-html-build": "^0.5.0",
+    "grunt-svgstore": "^0.5.0",
+    "grunt-text-replace": "^0.4.0",
+    "serve-index": "^1.7.3",
+    "serve-static": "^1.10.3"
+  },
+  "scripts": {
+    "svg": "./node_modules/.bin/grunt svg",
+    "dev": "./node_modules/.bin/grunt dev",
+    "w": "./node_modules/.bin/grunt w",
+    "wl": "./node_modules/.bin/grunt wl",
+    "prod": "./node_modules/.bin/grunt prod",
+    "wl-prod": "./node_modules/.bin/grunt wl-prod"
+  }
+}

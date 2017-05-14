@@ -1,0 +1,118 @@
+<div class="app-component-attack app-panel" id="app-component-attack">
+	
+	<!-- 插入时间条公共组件 -->
+
+	<!-- 插入Top5资产 -->
+
+	<div class="app-panel-content" id="app-panel-content-world-map">
+		<!-- <div class="app-panel-content-title">互联网攻击态势</div> -->
+		<!-- 插入攻击源 -->
+		<!-- 插入攻击目标 -->
+		
+		<!-- 攻击趋势图 -->
+		<div class="content-block app-panel-content-line">
+			<div class="content-block-title" data-type="open">
+				近期攻击态势
+				<svg><use xlink:href="#up"></use></svg></div>
+			<div class="content-block-work" id="content-block-work-line">
+				<!-- 插入攻击趋势图 -->
+			</div>
+		</div>
+
+		<!--插入攻击列表 -->
+	</div>
+</div>
+
+<!-- 插入Top5资产 -->
+<script id="app-panel-asset" type="text/html">
+	<div class="app-panel-asset text-center">
+		<div class="app-relative asset-item asset-item-frist-child top1">
+			<p class="asset-item-top top1">TOP 1</p>
+			<p class="asset-item-ip">{{list[0].name}}</p>
+			<p class="asset-item-count"><span>{{list[0].num}}</span>次</p>
+		</div><div class="app-relative asset-item top2">
+			<p class="asset-item-top top2">TOP 2</p>
+			<p class="asset-item-ip">{{list[1].name}}</p>
+			<p class="asset-item-count"><span>{{list[1].num}}</span>次</p>
+		</div><div class="app-relative asset-item top3">
+			<p class="asset-item-top top3">TOP 3</p>
+			<p class="asset-item-ip">{{list[2].name}}</p>
+			<p class="asset-item-count"><span>{{list[2].num}}</span>次</p>
+		</div><div class="app-relative asset-item top4">
+			<p class="asset-item-top top4">TOP 4</p>
+			<p class="asset-item-ip">{{list[3].name}}</p>
+			<p class="asset-item-count"><span>{{list[3].num}}</span>次</p>
+		</div><div class="app-relative asset-item asset-item-last-child top5">
+			<p class="asset-item-top top5">TOP 5</p>
+			<p class="asset-item-ip">{{list[4].name}}</p>
+			<p class="asset-item-count"><span>{{list[4].num}}</span>次</p>
+		</div>
+	</div>
+</script>
+
+<!-- 插入攻击源 -->
+<script id="app-panel-content-source" type="text/html">
+	<!-- 攻击源 -->
+	<div class="content-block app-panel-content-source">
+		<div class="content-block-title" data-type="open">攻击源
+			<svg><use xlink:href="#up"></use></svg></div>
+		<ul class="content-block-ul content-block-work">
+			{{each nodes as obj}}
+				{{if obj.type === "source"}}
+				<li class="content-block-li">
+					<span class="">{{obj.name}}</span>
+				</li>	
+				{{/if}}
+			{{/each}}
+		</ul>
+	</div>
+</script>
+
+<!-- 插入攻击目的 -->
+<script id="app-panel-content-target" type="text/html">
+	<!-- 攻击目的 -->
+	<div class="content-block app-panel-content-target">
+		<div class="content-block-title"  data-type="open">攻击目标
+			<svg><use xlink:href="#up"></use></svg></div>
+		<ul class="content-block-ul  content-block-work content-block-ul-target">
+			{{each nodes as obj}}
+				{{if obj.type === "target"}}
+				<li class="content-block-li">
+					<div class=""><span class="label-name">{{obj.name}}
+						</span><span class="label-visit">{{obj.num}}</span></div>
+				</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	</div>
+</script>
+
+<!-- 插入攻击列表 -->
+<script id="app-panel-content-table" type="text/html">
+	<!-- 攻击列表 -->
+	<div class="content-block app-panel-content-table">
+		<div class="handle-drawer"  data-type="open"><svg><use xlink:href="#down"></use></svg></div>
+		<div class="table-outside">
+			<table class="table app-table table-striped">
+			  <thead>
+				  	<tr>
+				  		{{each head as obj}}
+				  			<td>{{obj}}</td>
+				  		{{/each}}
+				  	</tr>
+			  </thead>
+			  <tbody>
+			  	{{each body as obj}}
+			  		<tr>
+				  		<td>{{obj.time}}</td>
+				  		<td>{{obj.addr}}</td>
+				  		<td>{{obj.ip}}</td>
+				  		<td>{{obj.target}}</td>
+				  		<td>{{obj.type}}</td>
+				  	</tr>
+			  	{{/each}}
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</script>

@@ -1,0 +1,160 @@
+.app-component-access-analysis {
+	font-size: 12px;
+	height: 100%;
+	color:#fff;
+	padding: 0 10px;
+}
+.app-component-access-analysis .app-panel-content {
+	position: absolute;
+	top:35px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+}
+.app-component-access-analysis .app-panel-content .access-top10 {
+	position: absolute;
+	top:0;
+	left: 5px;
+	z-index: 2;
+	width: 270px;
+	height: 330px;
+}
+.app-component-access-analysis .app-panel-content .access-line-hour {
+	margin-left: 261px;
+	height: 317px;
+	background-color: rgba(0,0,0,0.2);
+	border-radius:5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.app-component-access-analysis .col-padding-left {
+	padding-left: 3px;
+}
+.app-component-access-analysis .col-padding-week {
+	padding-left: 10px;
+}
+.app-component-access-analysis .col-padding-right {
+	padding-right: 3px;
+}
+.app-component-access-analysis .app-panel-content .access-line-week {
+	min-height: 200px;
+	background-color: rgba(0,0,0,0.2);
+	border-radius:5px;
+}
+.app-component-access-analysis .app-panel-content .access-line-month {
+	min-height: 200px;
+	background-color: rgba(0,0,0,0.2);
+	border-radius:5px;	
+}
+.app-component-access-analysis .app-panel-content-title {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	color: #fff;
+}
+.app-component-access-analysis .app-panel-content-topn {
+	background-color: rgba(0,0,0,0.2);
+	border-radius:5px;
+	margin:5px;
+}
+.app-component-access-analysis .app-panel-content-topn .topn-title {
+	padding: 5px 10px;
+}
+.app-component-access-analysis .app-panel-content-topn .topn-ul {
+	padding: 0;
+	margin-bottom: 0;
+}
+.app-component-access-analysis .app-panel-content-topn .topn-li {
+	list-style: none;
+	padding: 6px 10px;
+}
+.app-component-access-analysis .app-panel-content-topn .topn-li:nth-child(1)  {
+	padding-top: 0;
+}
+.app-component-access-analysis .app-panel-content-topn .topn-li:nth-child(10)  {
+	padding-bottom: 12px;
+}
+.app-component-access-analysis .app-panel-content-topn .topn-li span {
+	display: inline-block;
+	margin-right: 5px;
+}
+.app-component-access-analysis .app-panel-content-topn .topn-ranking {
+	width: 15px;
+    line-height: 15px;
+    height: 15px;
+    text-align: center;
+    border-radius: 3px;
+}
+.app-component-access-analysis .app-panel-content-topn span.topn-name {
+	min-width: 80px;
+	color: #fff;
+	margin-right: 0;
+}
+.app-component-access-analysis .app-panel-content-topn span.topn-scale {
+	overflow: hidden;
+    height: 10px;
+    width: 100px;
+	margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+.app-component-access-analysis .app-panel-content-topn span.topn-scale span.topn-scale-in {
+	margin-right: 0;
+	border-radius: 5px;
+    height: 10px;
+    width: 0;
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+.app-component-access-analysis .app-panel-content-topn span.topn-statistics {
+	margin-right: 0;
+	display: inline-block;
+	-webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.app-component-access-analysis .topn-color-bg-1 {
+	background-color: #f15127;
+}
+.app-component-access-analysis .topn-color-1 {
+	color: #f15127;	
+}
+.app-component-access-analysis .topn-color-bg-2 {
+	background-color: #f1c15c;
+}
+.app-component-access-analysis .topn-color-2 {
+	color: #f1c15c;	
+}
+.app-component-access-analysis .topn-color-bg-3 {
+	background-color: #4ac97a;
+}
+.app-component-access-analysis .topn-color-3 {
+	color: #4ac97a;	
+}
+.app-component-access-analysis .topn-color-bg-4 {
+	background-color: #4fafc8;
+}
+.app-component-access-analysis .topn-color-4 {
+	color: #4fafc8;	
+}
+.app-component-access-analysis .topn-color-bg-5 {
+	background-color: #199de6;
+}
+.app-component-access-analysis .topn-color-5 {
+	color: #199de6;	
+}
+.app-component-access-analysis .topn-color-bg-6,
+.app-component-access-analysis .topn-color-bg-7,
+.app-component-access-analysis .topn-color-bg-8,
+.app-component-access-analysis .topn-color-bg-9,
+.app-component-access-analysis .topn-color-bg-10 {
+	background-color: #999997;
+}
+.app-component-access-analysis .topn-color-6,
+.app-component-access-analysis .topn-color-7,
+.app-component-access-analysis .topn-color-8,
+.app-component-access-analysis .topn-color-9,
+.app-component-access-analysis .topn-color-10 {
+	color: #999997;	
+}

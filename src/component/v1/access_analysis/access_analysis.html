@@ -1,0 +1,52 @@
+<div class="app-component-access-analysis app-panel" id="app-component-access-analysis">
+	
+	<!-- 插入时间条公共组件 -->
+
+	<div class="app-panel-content" id="app-panel-content-access">
+		<div class="container-fluid">
+			<div class="row">
+			  	<div class="access-top10" id="access-top10">
+					<!-- 插入 访问top10 列表 -->
+				</div>
+			  	<div class="col-md-12 col-sm-12">
+			  		<div class="access-line-hour app-relative" id="access-line-hour">
+			  			<div class="app-panel-content-title">0-24点访问量</div>
+						<!-- 插入 访问当天柱线图 -->
+					</div>
+			  	</div>
+			</div>
+			<div class="row">
+			  	<div class="col-md-6 col-sm-6 col-padding-week col-padding-right">
+				  	<div class="access-line-week  app-relative" id="access-line-week">
+				  		<div class="app-panel-content-title">周日-周六访问量</div>
+						<!-- 插入 访问当周柱线图 -->
+					</div>
+			  	</div>
+			  	<div class="col-md-6 col-sm-6 col-padding-left">
+			  		<div  class="access-line-month  app-relative" id="access-line-month">
+			  			<div class="app-panel-content-title">月份访问量</div>
+						<!-- 插入 访问当月柱线图 -->
+					</div>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- 访问top10 列表 -->
+<script id="app-panel-content-access-topn" type="text/html">
+	<div class="app-panel-content-topn">
+		<div class="topn-title">{{title}}</div>
+		<ul class="topn-ul">
+			{{each list as obj i}}
+				<li class="topn-li">
+					<span class="topn-ranking topn-color-bg-{{i + 1}}">{{i + 1}}</span><span
+					 class="topn-name">{{obj.name}}</span><span class="topn-scale">
+					 	<span class="topn-scale-in topn-color-bg-{{i + 1}}">&nbsp;</span>
+					 	</span><span class="topn-statistics topn-color-{{i + 1}}">{{obj.num}}</span>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</script>

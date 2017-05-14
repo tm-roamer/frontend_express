@@ -1,0 +1,50 @@
+
+<!-- 时间控件 -->
+<script id="app-panel-head" type="text/html">
+	<div class="clearfix app-panel-head">
+		<div class="pull-left">
+			从<a tabindex="0" role="button" data-toggle="popover" data-placement="bottom" class="app-panel-head-time" type="start"><span class="year">2015</span>年<span class="month">5</span>月</a>至<a tabindex="0" role="button" data-toggle="popover" data-placement="bottom" class="app-panel-head-time" type="end"><span class="year">2015</span>年<span class="month">5</span>月</a>
+			<a class="app-panel-head-search" href="javascript:void(0);">开始检索</a>
+			<span class="desc-title text-left">
+				{{title}}<span class="desc-sub-title">{{subtitle}}</span>
+			</span>
+		</div>
+		<div class="pull-right">
+			<div class="app-panel-head-btn-group">
+			  <a class="app-time-selected app-panel-head-time-half-year active" data-type="6">半年</a><a
+			   class="app-time-selected app-panel-head-time-year" data-type="12">一年</a>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- 时间窗 -->
+<script id="app-time-panel" type="text/html">
+	<div class="app-time-panel">
+		<div class="time-year text-center app-relative">
+			<svg class="time-year-link left" style="{{min===current?'display: none':''}}"
+				 data-type="left" data-min="{{min}}" data-max="{{max}}"><use xlink:href="#left"></use></svg>
+			<span class="current-year">{{current}}年</span>
+			<svg class="time-year-link right" style="{{max===current?'display: none':''}}"
+				 data-type="right" data-min="{{min}}" data-max="{{max}}"><use xlink:href="#right"></use></svg>
+		</div>
+		<ul class="time-month-ul clearfix">
+			{{each list}}
+				<li class="time-month-li">
+					<a class="time-month-link {{month === $index ? 'active' : ''}} {{$index > maxMonth ? 'disable' : ''}}" 
+						href="javascript:void(0)">{{$index+1}}月</a>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</script>
+
+<!-- 时间窗 月份 -->
+<script id="time-month-li" type="text/html">
+	{{each list}}
+		<li class="time-month-li">
+			<a class="time-month-link {{month === $index ? 'active' : ''}} {{$index > maxMonth ? 'disable' : ''}}" 
+				href="javascript:void(0)">{{$index+1}}月</a>
+		</li>
+	{{/each}}
+</script>

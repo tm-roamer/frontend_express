@@ -1,0 +1,28 @@
+<div class="app-component-visit app-panel" id="app-component-visit">
+	
+	<!-- 插入时间条公共组件 -->
+
+	<div class="app-panel-content" id="app-panel-content-china-map">
+		<div class="app-panel-content-title">互联网访问分析</div>
+		<!-- 插入 TOPN 列表 -->
+		<!-- 插入 中国地图 -->
+	</div>
+
+</div>
+
+<!-- TOPN 列表 -->
+<script id="app-panel-content-topn" type="text/html">
+	<div class="app-panel-content-topn">
+		<div class="topn-title">{{title}}</div>
+		<ul class="topn-ul">
+			{{each list as obj i}}
+				<li class="topn-li">
+					<span class="topn-ranking topn-color-bg-{{i + 1}}">{{i + 1}}</span><span
+					 class="topn-name">{{obj.name}}</span><span class="topn-scale">
+					 	<span class="topn-scale-in topn-color-bg-{{i + 1}}" >&nbsp;</span>
+					 	</span><span class="topn-statistics topn-color-{{i + 1}}">{{obj.num}}</span>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</script>

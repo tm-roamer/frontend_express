@@ -1,0 +1,103 @@
+.app-panel-head {
+	overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+}
+.app-panel-head label {
+	margin-bottom: 0;
+}
+.app-panel-head .app-panel-head-time {
+	background-color: #183d57;
+	padding: 4px 15px 3px;
+	margin: 0 5px;
+	border-radius: 15px;
+	color: #fff;
+	font-size: 12px;
+	height: auto;
+    border: 0;
+    width: 105px;
+    text-align: left;
+}
+.app-panel-head svg.datepicker {
+	width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    fill: #fff;
+}
+.app-panel-head .form-control::-moz-placeholder {
+	color: rgba(255,255,255,0.6);
+	opacity: 1;
+}
+.app-panel-head .form-control:-ms-input-placeholder {
+	color: rgba(255,255,255,0.6);
+}
+.app-panel-head .form-control::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.6);
+}
+.app-panel-head .app-panel-head-search {
+	background-color: #4eadcb;
+	border-radius: 15px;
+	color:#fff;
+	cursor: pointer;
+	padding: 5px 15px;
+	margin: 0 5px;
+	-webkit-transition: background 0.1s ease-in-out;
+    -o-transition: background 0.1s ease-in-out;
+    transition: background 0.1s ease-in-out;
+}
+.app-panel-head .app-panel-head-search:hover {
+	background-color: #38778b;
+}
+.app-panel-head .desc-title {
+	font-size: 13px;
+	margin:10px 5px;
+}
+.app-panel-head .desc-sub-title {
+	font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    padding: 0 5px;
+}
+.app-panel-head .app-panel-head-search:hover,
+.app-panel-head .app-panel-head-search:focus,
+.app-panel-head .app-panel-head-time-half-year:hover,
+.app-panel-head .app-panel-head-time-half-year:focus,
+.app-panel-head .app-panel-head-time-year:hover,
+.app-panel-head .app-panel-head-time-year:focus {
+	color:#fff;
+	text-decoration: none;
+}
+.app-panel-head .app-panel-head-time-half-year,
+.app-panel-head .app-panel-head-time-year {
+	background-color: transparent;
+	color:#fff;
+	font-size: 12px;
+	padding: 5px 15px;
+	border: 1px solid #263b4e;
+	cursor: pointer;
+}
+.app-panel-head .app-panel-head-time-half-year {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-right: 0;
+}
+.app-panel-head .app-panel-head-time-year { 
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;	
+}
+.app-panel-head .app-panel-head-time-half-year.active,
+.app-panel-head .app-panel-head-time-year.active {
+ 	background-color: #263b4e;
+}
+/* 补充左右切换图标 */
+.glyphicon-arrow-left svg {
+	fill: #656565;
+	height: 12px;
+	width: 12px;
+}
+.glyphicon-arrow-right svg {
+	fill: #656565;
+	height: 12px;
+	width: 12px;
+}

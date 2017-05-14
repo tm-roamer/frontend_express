@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <!-- 这段注释, 不可以删除, 是动态脚本引入css -->
+    <link type="text/css" rel="stylesheet" href="/webui/style/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="/webui/style/main.css" />
+    <link type="text/css" rel="stylesheet" href="/webui/component/common/datepicker/bootstrap-datetimepicker.css" />
+    <link type="text/css" rel="stylesheet" href="/webui/component/common/datepicker/datepicker.css" />
+    <link type="text/css" rel="stylesheet" href="/webui/component/common/timebar/timebar.css" />
+    <link type="text/css" rel="stylesheet" href="/webui/component/v1/access_analysis/access_analysis.css" />
+    <link type="text/css" rel="stylesheet" href="/webui/component/v1/attack/attack.css" />
+    <link type="text/css" rel="stylesheet" href="/webui/component/v1/leak/leak.css" />
+    <link type="text/css" rel="stylesheet" href="/webui/component/v1/visit/visit.css" />
+    <style type="text/css">
+        body {
+            font-size: 12px
+        }
+
+        .app-login-panel {
+            position: absolute;
+            width: 320px;
+            top: 45%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .app-login-panel-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .app-login-panel-content {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 40px 20px 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group .input-group {
+            height: 40px;
+        }
+
+        .form-group input {
+            height: 40px;
+        }
+
+        .form-group .input-group-addon {
+            background: rgba(0, 0, 0, 0.2);
+            border: 0;
+        }
+
+        .form-group svg {
+            height: 14px;
+            width: 14px;
+            fill: #fff;
+        }
+
+        #username,
+        #password {
+            border: 0;
+            background: rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+        }
+
+        .form-control::-moz-placeholder {
+            color: rgba(255, 255, 255, 0.6);
+            opacity: 1;
+        }
+
+        .form-control:-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-control::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-block {
+            background-color: #f05328;
+            color: #fff;
+            font-size: 12px;
+            height: 40px
+        }
+
+        .btn-block:hover,
+        .btn-block:focus,
+        .btn-block:active {
+            background-color: #f05328 !important;
+            /*border: 0;*/
+        }
+
+        .validate-info {
+            color: #f05328;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .login-toolbar {
+            height: 50px;
+            background: rgba(0, 0, 0, 0.2);
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        .login-toolbar>div {
+            float: left;
+            width: 50%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .app-switch {
+            display: inline-block;
+            overflow: hidden;
+            height: 16px;
+            width: 32px;
+            /*background-color: #65bb64;*/
+            border-radius: 8px;
+            vertical-align: middle;
+            position: relative;
+            top: -2px;
+            cursor: pointer;
+        }
+
+        .app-switch .app-switch-inside {
+            display: inline-block;
+            width: 48px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transition: left 0.2s;
+            -moz-transition: left 0.2s;
+            -o-transition: left 0.2s;
+            transition: left 0.2s;
+        }
+
+        .app-switch .switch-open,
+        .app-switch .switch-close {
+            float: left;
+            width: 24px;
+            height: 16px;
+        }
+
+        .app-switch .switch-open {
+            background-color: #65bb64;
+        }
+
+        .app-switch .switch-close {
+            background-color: #9a9a9a;
+        }
+
+        .app-switch .slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 16px;
+            width: 16px;
+            border-radius: 8px;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 登录框 -->
+    <div class="app-login-panel">
+        <!-- 标题 -->
+        <div class="app-login-panel-title">
+            <img src="img/logo.png">
+        </div>
+        <!-- 主体 -->
+        <div class="app-login-panel-content">
+            <div class="app-login-form">
+                <form>
+                    <!-- 用户名 -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-205 297 200 200" xml:space="preserve"><g><g transform="scale(0.1953125, 0.1953125)">
+                        <path d="M-539.1,2544.4c-60,0-120.1,0.6-180.1-0.2c-38.1-0.5-76.2-2-114.2-4.7c-34.4-2.5-68.5-7.8-100.6-21.5
+                          c-18-7.7-33.7-18.6-43.4-36.4c-5.8-10.6-7.8-22.1-8.2-34.1c-2.3-64.5,9.9-125.9,41.6-182.6c41.2-73.7,101.6-125.5,180.3-156
+                          c40.6-15.7,82.9-22.6,126.3-22.7c66.7-0.1,133.4-0.3,200.1,0c88.5,0.4,166.8,28.8,233.2,87.5c59.2,52.4,95.9,117.9,109.9,196
+                          c5,27.9,5.9,56.1,4.4,84.3c-1.3,25.1-15.4,42.8-36.3,55.4c-21.4,12.9-45.2,19-69.4,23.5c-57.8,10.6-116.4,11-174.9,11.5
+                          c-56.2,0.5-112.5,0.1-168.7,0.1C-539.1,2544.5-539.1,2544.4-539.1,2544.4z M-274.1,1793.6c0,113.2-75.6,216.4-189.6,253
+                          C-609,2093.3-762.8,2013.9-809,1871c-34-105.4,2.5-222.7,89.9-290.9c41.9-32.7,89.2-52.4,142-57.9
+                          c137.8-14.3,261.1,73.7,294.4,201.4C-277,1745.5-274.3,1767.7-274.1,1793.6z"/>
+                      </g></g>
+                  </svg>
+                            </div>
+                            <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+                        </div>
+                    </div>
+                    <!-- 密码框 -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-205 297 200 200" xml:space="preserve">
+                    <g><g transform="scale(0.1953125, 0.1953125)">
+                        <path d="M-537.3,1516.6c0.1,0,0.2,0,0.3,0c0.1,0,0.2,0,0.3,0H-537.3z M-168,1958.2c-9,0-60.8,0.3-70.5,0.3v-154.9
+                          c0-172.6-116.8-286.9-298.5-287c-181.9,0.1-300.9,120.2-300.9,287v153.8c-6.2,0-72.2,0.8-78.1,0.8c-43.7,0-71.8,35.5-71.8,73.8
+                          v437.4c0,43.3,24.1,75.3,70.5,75.3h751.3c36.3,0,77.7-31.3,77.7-87.5l0-415.2C-88.2,1998.7-103.2,1958.2-168,1958.2z
+                           M-437.8,2350.9c0,54.1-44.7,98-100,98c-55.2,0-100-43.9-100-98v-1.5c0-36.3,20.1-67.9,49.9-84.9v-180.8
+                          c0-25.8,21.3-28.3,47.7-28.3c26.3,0,52.3,2.5,52.3,28.3v180.8c29.9,17,49.9,48.6,49.9,84.9L-437.8,2350.9L-437.8,2350.9z
+                           M-337.2,1957h-399.9V1760c0-94.6,110.6-146,193.9-146h18.3c83.5,0,187.7,47.9,187.7,146V1957z"/>
+                      </g></g>
+                  </svg>
+                            </div>
+                            <input type="password" class="form-control" id="password" placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <!-- 提交按钮 -->
+                    <button type="submit" class="btn btn-primary btn-block">登录</button>
+                </form>
+            </div>
+            <!-- 验证错误消息 -->
+            <div class="validate-info">
+                用户名或密码错误
+            </div>
+            <!-- 工具按钮 -->
+            <div class="login-toolbar clearfix">
+                <div class="forget-pwd">忘记密码</div>
+                <div class="remember-me">
+                    <div class="app-switch switch-small">
+                        <div class="app-switch-inside clearfix">
+                            <div class="switch-open"></div>
+                            <div class="switch-close"></div>
+                            <div class="slider"></div>
+                        </div>
+                        <input type="hidden" name="remember" value="open" />
+                    </div>
+                    记住登录状态
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 这段注释, 不可以删除, 是动态脚本引入lib.js -->
+    <script type="text/javascript" src="/webui/lib/jquery.js"></script>
+    <script type="text/javascript" src="/webui/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="/webui/lib/d3.js"></script>
+    <script type="text/javascript" src="/webui/lib/page.js"></script>
+    <script type="text/javascript" src="/webui/lib/sea.min.js"></script>
+    <script type="text/javascript" src="/webui/lib/template.min.js"></script>
+    <script type="text/javascript" src="/webui/lib/topojson.v1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // 记住登录状态
+            $(".app-switch").on('click', function(e) {
+                var self = $(this),
+                    slider = self.find(".app-switch-inside"),
+                    input = self.find("input[name='remember']"),
+                    type = input.val();
+                if (type === 'open') {
+                    slider.css("left", "-16px");
+                    input.val('close');
+                } else {
+                    slider.css("left", 0);
+                    input.val('open');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
