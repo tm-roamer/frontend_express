@@ -9,9 +9,9 @@ body {
   background-repeat: no-repeat;
   background-position: center 0;
   background-attachment: fixed;
-  background-image: radial-gradient(farthest-side ellipse at 10% 0, #154265 20%, #7392c2);
-  background-image: -webkit-radial-gradient(10% 0, farthest-side ellipse, #154265 20%, #7392c2); 
-  background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, #154265 20%, #7392c2);
+  background-image: radial-gradient(farthest-side ellipse at 10% 0, #375e7e 20%, #8f6942);
+  background-image: -webkit-radial-gradient(10% 0, farthest-side ellipse, #375e7e 20%, #8f6942);
+  background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, #375e7e 20%, #8f6942);
   background-attachment: fixed, fixed;
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#154265, endColorstr=#7392c2);/*IE<9>*/
 }
